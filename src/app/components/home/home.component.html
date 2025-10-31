@@ -1,0 +1,319 @@
+<div style="font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial; color:#111827; line-height:1.6;">
+  <header style="height:100px;background:linear-gradient(90deg,#0D47A1,#0B3A84);color:#f8fafc;padding:0 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20;">
+    <div style="display:flex;align-items:center;gap:24px;min-width:0;">
+      <div style="font-weight:800;letter-spacing:1.2px;white-space:nowrap;font-size:20px;font-family: 'Segoe UI', Roboto, Helvetica, Arial;">HAULLIGHT</div>
+      <nav class="top-nav" style="display:flex;gap:16px;align-items:center;white-space:nowrap;">
+        <a href="#about" (click)="$event.preventDefault(); scrollTo('about')" style="text-decoration:none;color:#E3F2FD;font-weight:500;">About</a>
+        <a href="#features" (click)="$event.preventDefault(); scrollTo('features')" style="text-decoration:none;color:#E3F2FD;font-weight:500;">Features</a>
+        <a href="#how-it-works" (click)="$event.preventDefault(); scrollTo('how-it-works')" style="text-decoration:none;color:#E3F2FD;font-weight:500;">How it Works</a>
+        <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')" style="text-decoration:none;color:#E3F2FD;font-weight:500;">Plans</a>
+        <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')" style="text-decoration:none;color:#E3F2FD;font-weight:500;">Testimonials</a>
+      </nav>
+    </div>
+    <div class="burger" role="button" tabindex="0" (click)="mobileMenuOpen = !mobileMenuOpen" (keydown.enter)="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle navigation" style="display:none;cursor:pointer;user-select:none;padding:8px 10px;border-radius:8px;">
+      <span style="display:block;width:24px;height:2px;background:#E3F2FD;margin:4px 0;"></span>
+      <span style="display:block;width:24px;height:2px;background:#E3F2FD;margin:4px 0;"></span>
+      <span style="display:block;width:24px;height:2px;background:#E3F2FD;margin:4px 0;"></span>
+    </div>
+  </header>
+  <div *ngIf="mobileMenuOpen" style="position:sticky;top:100px;z-index:19;background:#ffffff;box-shadow:0 10px 24px rgba(2,6,23,0.18);padding:12px 16px;">
+    <mat-card style="margin:0;border-radius:12px;">
+      <nav style="display:flex;flex-direction:column;gap:8px;">
+        <a href="#about" (click)="$event.preventDefault(); scrollTo('about')" style="text-decoration:none;color:#0f172a;font-weight:600;">About</a>
+        <a href="#features" (click)="$event.preventDefault(); scrollTo('features')" style="text-decoration:none;color:#0f172a;font-weight:600;">Features</a>
+        <a href="#how-it-works" (click)="$event.preventDefault(); scrollTo('how-it-works')" style="text-decoration:none;color:#0f172a;font-weight:600;">How it Works</a>
+        <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')" style="text-decoration:none;color:#0f172a;font-weight:600;">Plans</a>
+        <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')" style="text-decoration:none;color:#0f172a;font-weight:600;">Testimonials</a>
+      </nav>
+    </mat-card>
+  </div>
+
+  <section id="hero" style="background:linear-gradient(180deg,#F1F5F9,#FFFFFF); padding:56px 16px;">
+    <mat-card style="max-width:1100px; margin:0 auto; padding:32px; border-radius:16px; box-shadow:0 10px 30px rgba(2,6,23,0.08);">
+      <div style="display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between;">
+        <div style="flex:1 1 480px; min-width:280px;">
+          <h1 style="margin:0 0 12px 0; font-size:40px; line-height:1.2; color:#0f172a;">Run your trucks without the paperwork drag</h1>
+          <p style="margin:0 0 16px 0; font-size:16px; color:#334155;">HaulLight helps small fleets and owner‑operators dispatch jobs, track maintenance, and capture proof of delivery—fast.</p>
+          <ul style="margin:0 0 20px 18px; color:#334155;">
+            <li>10‑minute setup, zero training</li>
+            <li>Dispatch board with ETAs and driver assignment</li>
+            <li>Offline POD with photos and signatures</li>
+          </ul>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <button mat-raised-button color="primary" style="background:#0D47A1; color:#f8fafc; padding:0 20px; height:44px; border-radius:8px; font-weight:600;">Start free</button>
+            <button mat-stroked-button style="height:44px; border-radius:8px; border-color:#cbd5e1; color:#0f172a;" (click)="scrollTo('how-it-works')">See how it works</button>
+          </div>
+          <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">14‑day free trial. No credit card required.</p>
+        </div>
+      </div>
+    </mat-card>
+  </section>
+
+  <section id="about" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1.1fr 0.9fr; gap:24px;">
+      <div>
+        <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Built for small fleets that do it all</h2>
+        <p style="margin:0 0 16px 0; color:#475569;">We kept the essentials—dispatch, maintenance, fuel, and delivery—and cut the clutter so you can keep rolling.</p>
+        <ul style="margin:0 0 18px 18px; color:#334155;">
+          <li>Created by logistics vets who ran lean operations</li>
+          <li>Works on web and mobile with offline capture</li>
+          <li>Your data is exportable anytime—no lock‑in</li>
+        </ul>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <button mat-stroked-button style="height:40px; border-radius:8px; border-color:#cbd5e1; color:#0f172a;">Read customer stories</button>
+          <button mat-raised-button color="primary" style="height:40px; border-radius:8px; background:#0D47A1; color:#f8fafc;">Contact the team</button>
+        </div>
+        <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">We release improvements weekly and listen to driver feedback first.</p>
+      </div>
+      <div>
+        <mat-card style="border-radius:12px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#0f172a; margin:16px;">Why HaulLight exists</mat-card-title>
+          <mat-card-content style="margin:0 16px 16px 16px; color:#334155;">A lightweight app to manage trucks, drivers, jobs, and proof of delivery—without the enterprise bloat.</mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Everything you need, nothing you don't</h2>
+      <p style="margin:0 0 24px 0; color:#475569;">From first load to final signature, manage the trip without juggling apps.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#0f172a; margin-bottom:6px;">Dispatch Board</mat-card-title>
+          <mat-card-content style="color:#334155;">Drag‑and‑drop loads, assign drivers, and see live ETAs at a glance.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#0f172a; margin-bottom:6px;">Maintenance &amp; DVIR</mat-card-title>
+          <mat-card-content style="color:#334155;">Schedule service, record inspections, and get reminders before issues sideline a truck.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#0f172a; margin-bottom:6px;">Fuel &amp; Expenses</mat-card-title>
+          <mat-card-content style="color:#334155;">Scan receipts, track MPG, and export IFTA‑ready reports in seconds.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#0f172a; margin-bottom:6px;">Proof of Delivery</mat-card-title>
+          <mat-card-content style="color:#334155;">Capture signatures and photos offline; auto‑share a clean delivery link with customers.</mat-card-content>
+        </mat-card>
+      </div>
+      <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
+        <button mat-raised-button color="primary" style="background:#0D47A1; color:#f8fafc;">Explore all features</button>
+        <button mat-stroked-button style="border-color:#cbd5e1; color:#0f172a;" (click)="scrollTo('plans')">View plans</button>
+      </div>
+      <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">Role‑based access keeps drivers, dispatchers, and admins on the same page.</p>
+    </div>
+  </section>
+
+  <section id="why" style="padding:48px 16px; background:#F8FAFC;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Small app. Big impact.</h2>
+      <p style="margin:0 0 16px 0; color:#475569;">Cut admin time and keep wheels turning with tools sized for your business.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+        <mat-card class="feature-card" style="border-radius:12px;border:1px solid #e2e8f0;padding:18px;">Set up in 10 minutes—invite drivers by text</mat-card>
+        <mat-card class="feature-card" style="border-radius:12px;border:1px solid #e2e8f0;padding:18px;">Offline capture for low‑signal routes</mat-card>
+        <mat-card class="feature-card" style="border-radius:12px;border:1px solid #e2e8f0;padding:18px;">Works on any device—no special hardware</mat-card>
+        <mat-card class="feature-card" style="border-radius:12px;border:1px solid #e2e8f0;padding:18px;">Transparent pricing with no per‑feature add‑ons</mat-card>
+        <mat-card class="feature-card" style="border-radius:12px;border:1px solid #e2e8f0;padding:18px;">One‑click CSV export for peace of mind</mat-card>
+      </div>
+      <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
+        <button mat-raised-button color="primary" style="background:#0D47A1;color:#f8fafc;">Start free today</button>
+        <button mat-stroked-button style="border-color:#cbd5e1;color:#0f172a;">Compare to spreadsheets</button>
+      </div>
+      <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">HaulLight focuses on the jobs you run every day—not edge‑case bloat.</p>
+    </div>
+  </section>
+
+  <section id="how-it-works" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">From signup to first load in three steps</h2>
+      <p style="margin:0 0 24px 0; color:#475569;">Get operational in minutes, not weeks.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+        <mat-card class="feature-card" style="border-radius:12px;border:1px solid #e2e8f0;padding:20px;">
+          <mat-card-title style="font-size:18px;color:#0f172a;">1) Set up your fleet</mat-card-title>
+          <mat-card-content style="color:#334155;">Name your trucks, add drivers, and set service intervals. Import from CSV if you already track data.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="border-radius:12px;border:1px solid #e2e8f0;padding:20px;">
+          <mat-card-title style="font-size:18px;color:#0f172a;">2) Dispatch a job</mat-card-title>
+          <mat-card-content style="color:#334155;">Enter pickup and drop, assign a driver, and share load details instantly.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="border-radius:12px;border:1px solid #e2e8f0;padding:20px;">
+          <mat-card-title style="font-size:18px;color:#0f172a;">3) Deliver and get paid</mat-card-title>
+          <mat-card-content style="color:#334155;">Collect signatures and photos offline; share a branded POD link and export details for invoicing.</mat-card-content>
+        </mat-card>
+      </div>
+      <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
+        <button mat-raised-button color="primary" style="background:#0D47A1;color:#f8fafc;">Create your first job</button>
+        <button mat-stroked-button style="border-color:#cbd5e1;color:#0f172a;">Watch a 2‑minute demo</button>
+      </div>
+      <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">Use templates for repeat lanes and customers.</p>
+    </div>
+  </section>
+
+  <section id="plans" style="padding:48px 16px; background:#F8FAFC;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Pricing that fits small fleets</h2>
+      <p style="margin:0 0 24px 0; color:#475569;">Start free and upgrade when your miles demand it.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card style="flex:1 1 300px; min-width:280px; border:1px solid #e2e8f0; border-radius:14px; padding:20px; background:#ffffff;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">Solo</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:22px; color:#0f172a;">Free forever</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#334155;">
+            <li>1 truck, 1 driver</li>
+            <li>Up to 25 jobs/month</li>
+            <li>Mobile &amp; web access</li>
+            <li>Email support</li>
+            <li>Data export</li>
+          </ul>
+          <button mat-stroked-button style="width:100%; border-color:#cbd5e1; color:#0f172a; height:42px;">Start free</button>
+        </mat-card>
+        <mat-card style="flex:1 1 300px; min-width:280px; border:2px solid #0D47A1; border-radius:16px; padding:22px; background:#0D47A1; color:#f8fafc; transform:translateY(-4px); box-shadow:0 12px 30px rgba(2,6,23,0.15);">
+          <mat-card-title style="font-size:18px; color:#f8fafc;">Starter</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:22px; color:#f8fafc;">$12 per driver/month</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#E3F2FD;">
+            <li>Up to 5 trucks</li>
+            <li>Unlimited jobs</li>
+            <li>Maintenance schedules &amp; reminders</li>
+            <li>Photo + signature POD</li>
+            <li>Priority email support</li>
+          </ul>
+          <button mat-raised-button color="accent" style="width:100%; height:44px; background:#FFB300; color:#0b1a0f; font-weight:700;">Try Starter</button>
+        </mat-card>
+        <mat-card style="flex:1 1 300px; min-width:280px; border:1px solid #e2e8f0; border-radius:14px; padding:20px; background:#ffffff;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">Fleet</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:22px; color:#0f172a;">$29 per vehicle/month</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#334155;">
+            <li>Unlimited trucks &amp; drivers</li>
+            <li>Dispatch board with live ETAs</li>
+            <li>IFTA‑ready fuel reports</li>
+            <li>API access</li>
+            <li>Onboarding call</li>
+          </ul>
+          <button mat-stroked-button style="width:100%; border-color:#cbd5e1; color:#0f172a; height:42px;">Book a demo</button>
+        </mat-card>
+      </div>
+      <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">Taxes may apply. Prices in USD.</p>
+    </div>
+  </section>
+
+  <section id="testimonials" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Trusted by small fleets that move fast</h2>
+      <p style="margin:0 0 24px 0; color:#475569;">HaulLight replaces sticky notes and guesswork with a single source of truth.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#0f172a; font-weight:700;">Tanya R. • <span style="font-weight:500;color:#334155;">Owner‑Operator, TX</span></p>
+          <p style="margin:0; color:#334155;">“Setup took one coffee break. I dispatched my first load before lunch and never looked back.”</p>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#0f172a; font-weight:700;">Marcus L. • <span style="font-weight:500;color:#334155;">Fleet Manager, 7 trucks</span></p>
+          <p style="margin:0; color:#334155;">“POD links cut customer emails in half and we get paid faster. The app just fits how we work.”</p>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#0f172a; font-weight:700;">Henry O. • <span style="font-weight:500;color:#334155;">Dispatcher, PacWest Hauling</span></p>
+          <p style="margin:0; color:#334155;">“Maintenance reminders saved us from a roadside breakdown. Worth it for that alone.”</p>
+        </mat-card>
+      </div>
+      <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
+        <button mat-raised-button color="primary" style="background:#0D47A1;color:#f8fafc;">Join the movement</button>
+        <button mat-stroked-button style="border-color:#cbd5e1;color:#0f172a;">See more stories</button>
+      </div>
+      <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">Real results from real operators.</p>
+    </div>
+  </section>
+
+  <section id="faq" style="padding:48px 16px; background:#F8FAFC;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Questions, answered</h2>
+      <p style="margin:0 0 16px 0; color:#475569;">If you're hauling today, you can use HaulLight today.</p>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>Does HaulLight work offline?</span>
+          </mat-expansion-panel-header>
+          <p style="margin:8px 0 0 0;color:#334155;">Yes. Drivers can capture photos and signatures without signal; data syncs automatically when back online.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>Can I import my existing data?</span>
+          </mat-expansion-panel-header>
+          <p style="margin:8px 0 0 0;color:#334155;">You can import trucks, drivers, and customers from CSV. Our team can help with templates.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>Are there long‑term contracts?</span>
+          </mat-expansion-panel-header>
+          <p style="margin:8px 0 0 0;color:#334155;">No. Plans are monthly and you can cancel anytime from the dashboard.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>Where is my data stored?</span>
+          </mat-expansion-panel-header>
+          <p style="margin:8px 0 0 0;color:#334155;">Data is encrypted in transit and at rest on secure US‑based infrastructure. You can export anytime.</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;">
+        <button mat-stroked-button style="border-color:#cbd5e1;color:#0f172a;">View full FAQ</button>
+        <button mat-raised-button color="primary" style="background:#0D47A1;color:#f8fafc;" (click)="scrollTo('contact')">Contact support</button>
+      </div>
+      <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">Didn't find your answer? We usually reply within one business day.</p>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:16px;">
+      <div>
+        <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">We're here to help you roll</h2>
+        <p style="margin:0 0 16px 0; color:#475569;">Whether you're moving your first load or your thousandth, we'll get you set up fast.</p>
+        <ul style="margin:0 0 16px 18px;color:#334155;">
+          <li>Email support 7 days a week</li>
+          <li>Live demos by request</li>
+          <li>Migration help from spreadsheets</li>
+        </ul>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="mailto:support&#64;haullight.app" style="text-decoration:none;"><button mat-raised-button color="primary" style="background:#0D47A1;color:#f8fafc;">Email support</button></a>
+          <button mat-stroked-button style="border-color:#cbd5e1;color:#0f172a;">Book a 15‑minute demo</button>
+        </div>
+        <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">support&#64;haullight.app • Typical response time: under 24 hours.</p>
+      </div>
+      <div>
+        <mat-card style="border-radius:12px;border:1px solid #e2e8f0;padding:18px;">
+          <mat-card-title style="font-size:18px;color:#0f172a;">Logistics &amp; Transportation Software</mat-card-title>
+          <mat-card-content style="color:#334155;">A lightweight app to manage trucks, drivers, jobs, and proof of delivery—without the enterprise bloat.</mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#0f172a; color:#e2e8f0;">
+    <div style="max-width:1100px; margin:0 auto; padding:28px 16px; display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; justify-content:space-between;">
+      <div style="min-width:220px;">
+        <div style="font-weight:800; margin-bottom:6px; letter-spacing:1.2px;">HAULLIGHT</div>
+        <div style="font-size:13px; color:#94a3b8;">HaulLight is the small, focused app that keeps trucks, drivers, and jobs in sync—without heavy software.</div>
+      </div>
+      <div style="display:flex; gap:32px; flex-wrap:wrap;">
+        <div>
+          <div style="font-weight:600; margin-bottom:8px; color:#f1f5f9;">Product</div>
+          <a href="#features" (click)="$event.preventDefault(); scrollTo('features')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Features</a>
+          <a href="#how-it-works" (click)="$event.preventDefault(); scrollTo('how-it-works')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">How it Works</a>
+          <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Plans</a>
+          <a href="#faq" (click)="$event.preventDefault(); scrollTo('faq')" style="display:block; text-decoration:none; color:#cbd5e1;">FAQ</a>
+        </div>
+        <div>
+          <div style="font-weight:600; margin-bottom:8px; color:#f1f5f9;">Company</div>
+          <a href="#about" (click)="$event.preventDefault(); scrollTo('about')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">About</a>
+          <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Customer Stories</a>
+          <a href="#contact" (click)="$event.preventDefault(); scrollTo('contact')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Contact</a>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1;">Status</a>
+        </div>
+        <div>
+          <div style="font-weight:600; margin-bottom:8px; color:#f1f5f9;">Legal</div>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Privacy Policy</a>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Terms of Service</a>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1;">Data Processing Addendum</a>
+        </div>
+      </div>
+    </div>
+    <mat-divider style="border-top-color:#1f2937;"></mat-divider>
+    <div style="max-width:1100px; margin:0 auto; padding:14px 16px; font-size:12px; color:#94a3b8;">© 2025 haul-light. All rights reserved.</div>
+  </footer>
+</div>
